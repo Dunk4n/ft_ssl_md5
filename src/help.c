@@ -14,7 +14,7 @@
 
 void    fv__usage(void)
     {
-    fprintf(stdout, "usage: ft_ssl command [flags] [file/string]\n");
+    ft_printf("usage: ft_ssl command [flags] [file/string]\n");
     }
 
 void    fv__command_option_help(void)
@@ -29,7 +29,7 @@ void    fv__command_option_help(void)
     */
     u8_lcl_cnt = 0;
 
-    fprintf(stdout, "Commands:\n");
+    ft_printf("Commands:\n");
 
     /**
     * Display all the command
@@ -37,7 +37,7 @@ void    fv__command_option_help(void)
     u8_lcl_cnt = 0;
     while(u8_lcl_cnt < COMMAND_NUMBER)
         {
-        fprintf(stdout, "%s\n", command_name[u8_lcl_cnt]);
+        ft_printf("%s\n", command_name[u8_lcl_cnt]);
 
         /**
         * Checking for overflow
@@ -49,15 +49,15 @@ void    fv__command_option_help(void)
         else
             {
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -67,8 +67,8 @@ void    fv__command_option_help(void)
             } 
         }
 
-    fprintf(stdout, "\n");
-    fprintf(stdout, "Flags:\n");
+    ft_printf("\n");
+    ft_printf("Flags:\n");
 
     /**
     * Display all the simple option
@@ -88,7 +88,7 @@ void    fv__command_option_help(void)
             /**
             * Display the other option without a space before
             */ 
-            fprintf(stdout, "%s", simple_options[u8_lcl_cnt]);
+            ft_printf("%s", simple_options[u8_lcl_cnt]);
             }
         else
             {
@@ -99,7 +99,7 @@ void    fv__command_option_help(void)
             /**
             * Display the other option with a space before
             */ 
-            fprintf(stdout, " %s", simple_options[u8_lcl_cnt]);
+            ft_printf(" %s", simple_options[u8_lcl_cnt]);
             } 
 
         /**
@@ -112,15 +112,15 @@ void    fv__command_option_help(void)
         else
             {
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -148,7 +148,7 @@ void    fv__command_option_help(void)
             /**
             * Display the other option without a space before
             */ 
-            fprintf(stdout, "%s", argument_options[u8_lcl_cnt]);
+            ft_printf("%s", argument_options[u8_lcl_cnt]);
             }
         else
             {
@@ -159,7 +159,7 @@ void    fv__command_option_help(void)
             /**
             * Display the other option with a space before
             */ 
-            fprintf(stdout, " %s", argument_options[u8_lcl_cnt]);
+            ft_printf(" %s", argument_options[u8_lcl_cnt]);
             } 
 
         /**
@@ -172,15 +172,15 @@ void    fv__command_option_help(void)
         else
             {
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -190,5 +190,5 @@ void    fv__command_option_help(void)
             } 
         }
 
-    fprintf(stdout, "\n\n");
+    ft_printf("\n\n");
     }

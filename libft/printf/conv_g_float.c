@@ -16,7 +16,7 @@
 #include <float.h>
 #include "printf.h"
 
-static int	make_g_decimal(double nb, int *flags, size_t len)
+static int	make_g_decimal(int output, double nb, int *flags, size_t len)
 {
 	long long	i;
 	long long	tmp;
@@ -37,10 +37,10 @@ static int	make_g_decimal(double nb, int *flags, size_t len)
 		flags[2] = tmp;
 	else
 		flags[2] -= len;
-	return (conv_float_print(nb, flags, 0));
+	return (conv_float_print(output, nb, flags, 0));
 }
 
-int			make_g(double nb, int *flags)
+int			make_g(int output, double nb, int *flags)
 {
 	size_t		len;
 	long long	tmp;
@@ -55,7 +55,7 @@ int			make_g(double nb, int *flags)
 	if ((int)len >= flags[2] || (nb - (long long)nb) == 0)
 	{
 		flags[2] = 0;
-		return (conv_float_print(nb, flags, 0));
+		return (conv_float_print(output, nb, flags, 0));
 	}
-	return (make_g_decimal(nb, flags, len));
+	return (make_g_decimal(output, nb, flags, len));
 }

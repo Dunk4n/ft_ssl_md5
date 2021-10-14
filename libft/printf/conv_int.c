@@ -29,23 +29,23 @@ static long long	get_nb(va_list list, int *flags)
 	return (va_arg(list, int));
 }
 
-static size_t		put_nb(long long nb, int *flags)
+static size_t		put_nb(int output, long long nb, int *flags)
 {
 	size_t	i;
 
 	i = 0;
 	if (nb < 0)
-		i += write(1, "-", 1);
+		i += write(output, "-", 1);
 	if (nb >= 0 && flags[9])
-		i += write(1, "+", 1);
+		i += write(output, "+", 1);
 	if (nb >= 0 && flags[8] && !flags[9])
-		i += write(1, " ", 1);
+		i += write(output, " ", 1);
 	if (!flags[2] && !nb)
 		return (i);
 	if (flags[1])
-		return (put_long_nbr(nb, flags[10] - i, flags[6]) + i);
+		return (put_long_nbr(output, nb, flags[10] - i, flags[6]) + i);
 	else
-		return (put_long_nbr(nb, flags[2], flags[6]) + i);
+		return (put_long_nbr(output, nb, flags[2], flags[6]) + i);
 }
 
 static size_t		get_len(long long nb, int *flags)
@@ -68,7 +68,7 @@ static size_t		get_len(long long nb, int *flags)
 	return (len + add);
 }
 
-int					conv_int(va_list list, int *flags)
+int					conv_int(int output, va_list list, int *flags)
 {
 	long long	nb;
 	size_t		i;
@@ -80,13 +80,13 @@ int					conv_int(va_list list, int *flags)
 	i = 0;
 	len = get_len(nb, flags);
 	if (flags[0])
-		i += put_nb(nb, flags);
+		i += put_nb(output, nb, flags);
 	while (!flags[1] && (int)i < (int)(flags[10] - len))
 	{
-		write(1, " ", 1);
+		write(output, " ", 1);
 		i++;
 	}
 	if (!flags[0])
-		i += put_nb(nb, flags);
+		i += put_nb(output, nb, flags);
 	return (i);
 }

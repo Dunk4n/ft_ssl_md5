@@ -57,7 +57,7 @@ static int		if_sct_down(double nb)
 	return (0);
 }
 
-static int		make_sct_g_up(double nb, int *flags)
+static int		make_sct_g_up(int output, double nb, int *flags)
 {
 	int			i;
 	int			len;
@@ -78,10 +78,10 @@ static int		make_sct_g_up(double nb, int *flags)
 		tmp = tmp - ((int)tmp);
 	}
 	flags[2] = len;
-	return (conv_sct_print(nb, flags, 1));
+	return (conv_sct_print(output, nb, flags, 1));
 }
 
-static int		make_sct_g_down(double nb, int *flags)
+static int		make_sct_g_down(int output, double nb, int *flags)
 {
 	int			i;
 	int			len;
@@ -102,10 +102,10 @@ static int		make_sct_g_down(double nb, int *flags)
 		tmp = tmp - ((int)tmp);
 	}
 	flags[2] = len;
-	return (conv_sct_print(nb, flags, 1));
+	return (conv_sct_print(output, nb, flags, 1));
 }
 
-int				conv_g(va_list list, int *flags)
+int				conv_g(int output, va_list list, int *flags)
 {
 	double		nb;
 
@@ -115,8 +115,8 @@ int				conv_g(va_list list, int *flags)
 		flags[1] = 0;
 	nb = va_arg(list, double);
 	if (if_sct_up(nb, flags))
-		return (make_sct_g_up(nb, flags));
+		return (make_sct_g_up(output, nb, flags));
 	if (if_sct_down(nb))
-		return (make_sct_g_down(nb, flags));
-	return (make_g(float_round(nb, flags, 1), flags));
+		return (make_sct_g_down(output, nb, flags));
+	return (make_g(output, float_round(nb, flags, 1), flags));
 }

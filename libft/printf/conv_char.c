@@ -34,7 +34,7 @@ static long long	get_char(va_list list, int *flags)
 	return ((unsigned char)va_arg(list, int));
 }
 
-int					conv_char(va_list list, int *flags)
+int					conv_char(int output, va_list list, int *flags)
 {
 	long long		c;
 	char			padding;
@@ -45,14 +45,14 @@ int					conv_char(va_list list, int *flags)
 		return (-1);
 	padding = (!flags[0] && flags[1]) ? '0' : ' ';
 	if (flags[0])
-		write(1, &c, 1);
+		write(output, &c, 1);
 	i = 0;
 	while (flags[10] && (int)i < flags[10] - 1)
 	{
-		write(1, &padding, 1);
+		write(output, &padding, 1);
 		i++;
 	}
 	if (!flags[0])
-		write(1, &c, 1);
+		write(output, &c, 1);
 	return (i + 1);
 }

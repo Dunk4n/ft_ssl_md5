@@ -16,15 +16,15 @@
 #include <float.h>
 #include "printf.h"
 
-static size_t	put_double(double nb, int len, int *flags)
+static size_t	put_double(int output, double nb, int len, int *flags)
 {
 	size_t	i;
 	int		j;
 	char	c;
 
-	i = put_long_nbr((long long)nb, (!len) ? 1 : len, flags[6]);
+	i = put_long_nbr(output, (long long)nb, (!len) ? 1 : len, flags[6]);
 	if (flags[2] || flags[7])
-		i += write(1, ".", 1);
+		i += write(output, ".", 1);
 	else
 		return (i);
 	nb = nb - (long long)nb;
@@ -37,34 +37,34 @@ static size_t	put_double(double nb, int len, int *flags)
 	{
 		nb *= 10;
 		c = (char)(nb) + '0';
-		i += write(1, &c, 1);
+		i += write(output, &c, 1);
 		nb = nb - (long long)(nb);
 		j++;
 	}
 	return (i);
 }
 
-static size_t	put_nb(double nb, int *flags)
+static size_t	put_nb(int output, double nb, int *flags)
 {
 	size_t	i;
 
 	i = 0;
 	if (nb < 0)
-		i += write(1, "-", 1);
+		i += write(output, "-", 1);
 	if (nb >= 0 && flags[9])
-		i += write(1, "+", 1);
+		i += write(output, "+", 1);
 	if (nb >= 0 && flags[8] && !flags[9])
-		i += write(1, " ", 1);
+		i += write(output, " ", 1);
 	if (flags[1])
 	{
 		i +=
-put_double(nb, flags[10] - i - ((flags[2] == -1) ? 7 : (flags[2] + 1)), flags);
+put_double(output, nb, flags[10] - i - ((flags[2] == -1) ? 7 : (flags[2] + 1)), flags);
 		return (i);
 	}
-	return (put_double(nb, 0, flags) + i);
+	return (put_double(output, nb, 0, flags) + i);
 }
 
-static size_t	get_len(double nb, int *flags)
+static size_t	get_len( double nb, int *flags)
 {
 	int	len;
 	int add;
@@ -89,7 +89,7 @@ static size_t	get_len(double nb, int *flags)
 	return (len + add);
 }
 
-int				conv_float_print(double nb, int *flags, int round)
+int				conv_float_print(int output, double nb, int *flags, int round)
 {
 	size_t	i;
 	size_t	len;
@@ -100,10 +100,10 @@ int				conv_float_print(double nb, int *flags, int round)
 	i = 0;
 	len = get_len(nb, flags);
 	if (flags[0])
-		i += put_nb(nb, flags);
+		i += put_nb(output, nb, flags);
 	while (!flags[1] && (int)(i++) < (int)(flags[10] - len))
-		write(1, " ", 1);
+		write(output, " ", 1);
 	if (!flags[0])
-		i += put_nb(nb, flags);
+		i += put_nb(output, nb, flags);
 	return (i + ((!flags[1]) ? -1 : 0));
 }

@@ -28,7 +28,7 @@ static unsigned long long	get_nb(va_list list, int *flags)
 	return (va_arg(list, unsigned int));
 }
 
-static size_t				put_long_nbr_hex(unsigned long long nb, int len)
+static size_t				put_long_nbr_hex(int output, unsigned long long nb, int len)
 {
 	size_t	n;
 	char	c;
@@ -36,27 +36,27 @@ static size_t				put_long_nbr_hex(unsigned long long nb, int len)
 	n = 0;
 	if (nb > 15 || len - 1 > 0)
 	{
-		n += put_long_nbr_hex(nb / 16, len - 1);
+		n += put_long_nbr_hex(output, nb / 16, len - 1);
 		c = UHEX[nb % 16];
-		n += write(1, &c, 1);
+		n += write(output, &c, 1);
 		return (n);
 	}
 	c = UHEX[nb];
-	n += write(1, &c, 1);
+	n += write(output, &c, 1);
 	return (n);
 }
 
-static size_t				put_nb(unsigned long long nb, int *flags)
+static size_t				put_nb(int output, unsigned long long nb, int *flags)
 {
 	int	tmp;
 
 	tmp = ((flags[7] && nb) ? 2 : 0);
 	if (flags[7] && nb)
-		write(1, "0X", 2);
+		write(output, "0X", 2);
 	if (flags[1])
-		return (put_long_nbr_hex(nb, flags[10] - tmp) + tmp);
+		return (put_long_nbr_hex(output, nb, flags[10] - tmp) + tmp);
 	else
-		return (put_long_nbr_hex(nb, flags[2]) + tmp);
+		return (put_long_nbr_hex(output, nb, flags[2]) + tmp);
 }
 
 static size_t				get_len(unsigned long long nb, int *flags)
@@ -75,7 +75,7 @@ static size_t				get_len(unsigned long long nb, int *flags)
 	return (len);
 }
 
-int							conv_uhex(va_list list, int *flags)
+int							conv_uhex(int output, va_list list, int *flags)
 {
 	unsigned long long	nb;
 	size_t				i;
@@ -87,13 +87,13 @@ int							conv_uhex(va_list list, int *flags)
 	i = 0;
 	len = get_len(nb, flags);
 	if (flags[0] && (nb || flags[2]))
-		i += put_nb(nb, flags);
+		i += put_nb(output, nb, flags);
 	while (!flags[1] && (int)i < (int)(flags[10] - len))
 	{
-		write(1, " ", 1);
+		write(output, " ", 1);
 		i++;
 	}
 	if (!flags[0] && (nb || flags[2]))
-		i += put_nb(nb, flags);
+		i += put_nb(output, nb, flags);
 	return (i);
 }

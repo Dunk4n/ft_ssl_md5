@@ -16,14 +16,14 @@
 #include <wchar.h>
 #include "printf.h"
 
-static void		display_hex(long ptr, int size)
+static void		display_hex(int output, long ptr, int size)
 {
 	char	res[13];
 	size_t	i;
 
 	if (!ptr)
 	{
-		write(1, "0", 1);
+		write(output, "0", 1);
 		return ;
 	}
 	res[size] = '\0';
@@ -34,16 +34,16 @@ static void		display_hex(long ptr, int size)
 		res[--size] = HEX[ptr % 16];
 		ptr /= 16;
 	}
-	write(1, res, i);
+	write(output, res, i);
 }
 
-static size_t	display_ptr(long ptr, int min)
+static size_t	display_ptr(int output, long ptr, int min)
 {
 	int		i;
 	int		size;
 	long	tmp;
 
-	write(1, "0x", 2);
+	write(output, "0x", 2);
 	i = 0;
 	min -= 2;
 	tmp = ptr;
@@ -52,21 +52,21 @@ static size_t	display_ptr(long ptr, int min)
 		size++;
 	while (i < min - size)
 	{
-		write(1, "0", 1);
+		write(output, "0", 1);
 		i++;
 	}
-	display_hex(ptr, size);
+	display_hex(output, ptr, size);
 	return (i);
 }
 
-static size_t	size_ptr(long ptr, int *flags)
+static size_t	size_ptr(int output, long ptr, int *flags)
 {
 	size_t	i;
 
 	i = 0;
 	if (!ptr && !flags[2])
 	{
-		write(1, "0x", 2);
+		write(output, "0x", 2);
 		return (2);
 	}
 	if (!ptr)
@@ -76,7 +76,7 @@ static size_t	size_ptr(long ptr, int *flags)
 	return (i + 3);
 }
 
-int				conv_ptr(va_list list, int *flags)
+int				conv_ptr(int output, va_list list, int *flags)
 {
 	void	*ptr;
 	size_t	i;
@@ -84,20 +84,20 @@ int				conv_ptr(va_list list, int *flags)
 	if (flags[2] >= 0 || flags[0])
 		flags[1] = 0;
 	ptr = va_arg(list, void*);
-	i = size_ptr((long)ptr, flags);
+	i = size_ptr(output, (long)ptr, flags);
 	if (flags[0] && (flags[2] || ptr))
-		i += display_ptr((long)ptr, flags[2] + 2);
+		i += display_ptr(output, (long)ptr, flags[2] + 2);
 	while (!flags[1] && (int)i < flags[10])
 	{
-		write(1, " ", 1);
+		write(output, " ", 1);
 		i++;
 	}
 	if (!flags[0] && (flags[2] || ptr))
 	{
 		if (flags[1])
-			i += display_ptr((long)ptr, flags[10]);
+			i += display_ptr(output, (long)ptr, flags[10]);
 		else
-			i += display_ptr((long)ptr, flags[2] + 2);
+			i += display_ptr(output, (long)ptr, flags[2] + 2);
 	}
 	return (i);
 }

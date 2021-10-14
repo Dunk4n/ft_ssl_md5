@@ -28,15 +28,15 @@ uint8_t Fu8__structure_argument_init(argument_t *ptr_sstc_pssd_argument)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure argument is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure argument is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -61,15 +61,15 @@ uint8_t Fu8__structure_argument_init(argument_t *ptr_sstc_pssd_argument)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure argument passed in argument of the function is already initialized\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure argument passed in argument of the function is already initialized\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -127,15 +127,15 @@ uint8_t Fu8__structure_argument_init(argument_t *ptr_sstc_pssd_argument)
         else
             {
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -163,15 +163,15 @@ uint8_t Fu8__structure_argument_init(argument_t *ptr_sstc_pssd_argument)
         else
             {
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
             #endif
 
             return (RETURN_FAILURE);
@@ -200,15 +200,15 @@ uint8_t Fu8__structure_argument_init(argument_t *ptr_sstc_pssd_argument)
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the allocation of the actual argument string of the static array of string in the structure argument passed in argument of the function failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the allocation of the actual argument string of the static array of string in the structure argument passed in argument of the function failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -238,15 +238,15 @@ uint8_t Fu8__structure_argument_init(argument_t *ptr_sstc_pssd_argument)
         else
             {
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -272,15 +272,15 @@ uint8_t Fu8__structure_argument_init(argument_t *ptr_sstc_pssd_argument)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the allocation of the the dynamique array of file path in the structure argument passed in argument of the function failed\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the allocation of the the dynamique array of file path in the structure argument passed in argument of the function failed\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -324,15 +324,15 @@ uint8_t Fu8__structure_argument_init(argument_t *ptr_sstc_pssd_argument)
         else
             {
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;33mERROR\033[0m\n");
+            ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m\n");
             #endif
 
             /**
@@ -371,15 +371,15 @@ uint8_t Fu8__structure_argument_close(argument_t *ptr_sstc_pssd_argument)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure argument is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure argument is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -404,15 +404,15 @@ uint8_t Fu8__structure_argument_close(argument_t *ptr_sstc_pssd_argument)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure argument passed in argument of the function is not already initialized\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure argument passed in argument of the function is not already initialized\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -457,15 +457,15 @@ uint8_t Fu8__structure_argument_close(argument_t *ptr_sstc_pssd_argument)
         else
             {
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -493,15 +493,15 @@ uint8_t Fu8__structure_argument_close(argument_t *ptr_sstc_pssd_argument)
         else
             {
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
             #endif
 
             return (RETURN_FAILURE);
@@ -530,15 +530,15 @@ uint8_t Fu8__structure_argument_close(argument_t *ptr_sstc_pssd_argument)
         else
             {
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -567,15 +567,15 @@ uint8_t Fu8__structure_argument_close(argument_t *ptr_sstc_pssd_argument)
         else
             {
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -615,15 +615,15 @@ uint8_t Fu8__structure_argument_close(argument_t *ptr_sstc_pssd_argument)
         else
             {
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;33mERROR\033[0m\n");
+            ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m\n");
             #endif
 
             /**
@@ -670,15 +670,15 @@ uint8_t Fu8__structure_argument_reset(argument_t *ptr_sstc_pssd_argument)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure argument is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure argument is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -703,15 +703,15 @@ uint8_t Fu8__structure_argument_reset(argument_t *ptr_sstc_pssd_argument)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure argument passed in argument of the function is not already initialized\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure argument passed in argument of the function is not already initialized\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -756,15 +756,15 @@ uint8_t Fu8__structure_argument_reset(argument_t *ptr_sstc_pssd_argument)
         else
             {
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -792,15 +792,15 @@ uint8_t Fu8__structure_argument_reset(argument_t *ptr_sstc_pssd_argument)
         else
             {
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
             #endif
 
             return (RETURN_FAILURE);
@@ -828,15 +828,15 @@ uint8_t Fu8__structure_argument_reset(argument_t *ptr_sstc_pssd_argument)
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The reallocation of the actual argument string of the static array of string in the structure argument passed in argument of the function failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The reallocation of the actual argument string of the static array of string in the structure argument passed in argument of the function failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;33mERROR\033[0m\n");
+            ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m\n");
             #endif
 
             /**
@@ -863,15 +863,15 @@ uint8_t Fu8__structure_argument_reset(argument_t *ptr_sstc_pssd_argument)
         else
             {
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -900,15 +900,15 @@ uint8_t Fu8__structure_argument_reset(argument_t *ptr_sstc_pssd_argument)
         else
             {
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -933,15 +933,15 @@ uint8_t Fu8__structure_argument_reset(argument_t *ptr_sstc_pssd_argument)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The reallocation of the dynamique array of file path in the structure argument passed in argument of the function failed\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The reallocation of the dynamique array of file path in the structure argument passed in argument of the function failed\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;33mERROR\033[0m\n");
+        ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m\n");
         #endif
 
         /**
@@ -983,15 +983,15 @@ uint8_t Fu8__structure_argument_reset(argument_t *ptr_sstc_pssd_argument)
         else
             {
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;33mERROR\033[0m\n");
+            ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m\n");
             #endif
 
             /**
@@ -1042,15 +1042,15 @@ void Fv__structure_argument_display(argument_t *ptr_sstc_pssd_argument)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure argument is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure argument is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -1075,15 +1075,15 @@ void Fv__structure_argument_display(argument_t *ptr_sstc_pssd_argument)
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure argument passed in argument of the function is not already initialized\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure argument passed in argument of the function is not already initialized\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -1110,85 +1110,85 @@ void Fv__structure_argument_display(argument_t *ptr_sstc_pssd_argument)
     u64_lcl_cnt = 0;
     u8_lcl_cnt  = 0;
 
-    fprintf(stdout, "    ***********************************************\n");
-    fprintf(stdout, "    *              STRUCTURE ARGUMENT             *\n");
-    fprintf(stdout, "    ***********************************************\n\n");
+    ft_printf("    ***********************************************\n");
+    ft_printf("    *              STRUCTURE ARGUMENT             *\n");
+    ft_printf("    ***********************************************\n\n");
 
     /**
     * Display all the value of the global status of the structure argument passed in argument of the function
     */
-    fprintf(stdout, "GLOBAL STATUS:\n");
+    ft_printf("GLOBAL STATUS:\n");
     if((ptr_sstc_pssd_argument->u8_global_status_ & FIRST_BIT) != FALSE)
         {
-        fprintf(stdout, "    FIRST BIT:     \033[1;93;40mset\033[0m structure initialized\n");
+        ft_printf("    FIRST BIT:     \033[1;93;40mset\033[0m structure initialized\n");
         }
     else
         {
-        fprintf(stdout, "    FIRST BIT:     structure \033[1;95;40mNOT\033[0m initialized\n");
+        ft_printf("    FIRST BIT:     structure \033[1;95;40mNOT\033[0m initialized\n");
         }
     if((ptr_sstc_pssd_argument->u8_global_status_ & SECOND_BIT) != FALSE)
         {
-        fprintf(stdout, "    SECOND BIT:    \033[1;93;40mset error occure\033[0m\n");
+        ft_printf("    SECOND BIT:    \033[1;93;40mset error occure\033[0m\n");
         }
     else
         {
-        fprintf(stdout, "    SECOND BIT:    \033[1;95;40mNOT\033[0m set no error occure\n");
+        ft_printf("    SECOND BIT:    \033[1;95;40mNOT\033[0m set no error occure\n");
         }
     if((ptr_sstc_pssd_argument->u8_global_status_ & THIRD_BIT) != FALSE)
         {
-        fprintf(stdout, "    THIRD BIT:     \033[1;93;40mset\033[0m\n");
+        ft_printf("    THIRD BIT:     \033[1;93;40mset\033[0m\n");
         }
     else
         {
-        fprintf(stdout, "    THIRD BIT:     \033[1;95;40mNOT\033[0m set\n");
+        ft_printf("    THIRD BIT:     \033[1;95;40mNOT\033[0m set\n");
         }
     if((ptr_sstc_pssd_argument->u8_global_status_ & FOURTH_BIT) != FALSE)
         {
-        fprintf(stdout, "    FOURTH BIT:    \033[1;93;40mset\033[0m\n");
+        ft_printf("    FOURTH BIT:    \033[1;93;40mset\033[0m\n");
         }
     else
         {
-        fprintf(stdout, "    FOURTH BIT:    \033[1;95;40mNOT\033[0m set\n");
+        ft_printf("    FOURTH BIT:    \033[1;95;40mNOT\033[0m set\n");
         }
     if((ptr_sstc_pssd_argument->u8_global_status_ & FIFTH_BIT) != FALSE)
         {
-        fprintf(stdout, "    FIFTH BIT:     \033[1;93;40mset\033[0m\n");
+        ft_printf("    FIFTH BIT:     \033[1;93;40mset\033[0m\n");
         }
     else
         {
-        fprintf(stdout, "    FIFTH BIT:     \033[1;95;40mNOT\033[0m set\n");
+        ft_printf("    FIFTH BIT:     \033[1;95;40mNOT\033[0m set\n");
         }
     if((ptr_sstc_pssd_argument->u8_global_status_ & SIXTH_BIT) != FALSE)
         {
-        fprintf(stdout, "    SIXTH BIT:     \033[1;93;40mset\033[0m\n");
+        ft_printf("    SIXTH BIT:     \033[1;93;40mset\033[0m\n");
         }
     else
         {
-        fprintf(stdout, "    SIXTH BIT:     \033[1;95;40mNOT\033[0m set\n");
+        ft_printf("    SIXTH BIT:     \033[1;95;40mNOT\033[0m set\n");
         }
     if((ptr_sstc_pssd_argument->u8_global_status_ & SEVENTH_BIT) != FALSE)
         {
-        fprintf(stdout, "    SEVENTH BIT:   \033[1;93;40mset\033[0m\n");
+        ft_printf("    SEVENTH BIT:   \033[1;93;40mset\033[0m\n");
         }
     else
         {
-        fprintf(stdout, "    SEVENTH BIT:   \033[1;95;40mNOT\033[0m set\n");
+        ft_printf("    SEVENTH BIT:   \033[1;95;40mNOT\033[0m set\n");
         }
     if((ptr_sstc_pssd_argument->u8_global_status_ & EIGHTH_BIT) != FALSE)
         {
-        fprintf(stdout, "    EIGHTH BIT:    \033[1;93;40mset\033[0m\n");
+        ft_printf("    EIGHTH BIT:    \033[1;93;40mset\033[0m\n");
         }
     else
         {
-        fprintf(stdout, "    EIGHTH BIT:    \033[1;95;40mNOT\033[0m set\n");
+        ft_printf("    EIGHTH BIT:    \033[1;95;40mNOT\033[0m set\n");
         }
 
-    fprintf(stdout, "\n");
+    ft_printf("\n");
 
     /**
     * Display all the options set in the structure argument passed in argument of the function
     */
-    fprintf(stdout, "OPTIONS:\n");
+    ft_printf("OPTIONS:\n");
     u8_lcl_cnt = 0;
     while(u8_lcl_cnt < SIMPLE_OPTION_NUMBER)
         {
@@ -1201,7 +1201,7 @@ void Fv__structure_argument_display(argument_t *ptr_sstc_pssd_argument)
             * Treat the case when the actual option in the structure argument passed in argument of the function is set
             */
 
-            fprintf(stdout, "    The option [%s] is \033[1;93;40mset\033[0m\n", simple_options[u8_lcl_cnt]);
+            ft_printf("    The option [%s] is \033[1;93;40mset\033[0m\n", simple_options[u8_lcl_cnt]);
             }
         else
             {
@@ -1209,7 +1209,7 @@ void Fv__structure_argument_display(argument_t *ptr_sstc_pssd_argument)
             * Treat the case when the actual option in the structure argument passed in argument of the function is not set
             */
 
-            fprintf(stdout, "    The option [%s] is \033[1;95;40mNOT\033[0m set\n", simple_options[u8_lcl_cnt]);
+            ft_printf("    The option [%s] is \033[1;95;40mNOT\033[0m set\n", simple_options[u8_lcl_cnt]);
             }
 
         /**
@@ -1222,27 +1222,27 @@ void Fv__structure_argument_display(argument_t *ptr_sstc_pssd_argument)
         else
             {
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
             #endif
 
             return ;
             }
         }
 
-    fprintf(stdout, "\n");
+    ft_printf("\n");
 
     /**
     * Display all the argument options set in the structure argument passed in argument of the function
     */
-    fprintf(stdout, "ARGUMENT OPTIONS:\n");
+    ft_printf("ARGUMENT OPTIONS:\n");
     u8_lcl_cnt = 0;
     while(u8_lcl_cnt < ARGUMENT_OPTION_NUMBER)
         {
@@ -1255,7 +1255,7 @@ void Fv__structure_argument_display(argument_t *ptr_sstc_pssd_argument)
             * Treat the case when the actual argument option in the structure argument passed in argument of the function is set
             */
 
-            fprintf(stdout, "    The argument option [%s] is \033[1;93;40mset\033[0m\n", argument_options[u8_lcl_cnt]);
+            ft_printf("    The argument option [%s] is \033[1;93;40mset\033[0m\n", argument_options[u8_lcl_cnt]);
             }
         else
             {
@@ -1263,7 +1263,7 @@ void Fv__structure_argument_display(argument_t *ptr_sstc_pssd_argument)
             * Treat the case when the actual argument option in the structure argument passed in argument of the function is not set
             */
 
-            fprintf(stdout, "    The argument option [%s] is \033[1;95;40mNOT\033[0m set\n", argument_options[u8_lcl_cnt]);
+            ft_printf("    The argument option [%s] is \033[1;95;40mNOT\033[0m set\n", argument_options[u8_lcl_cnt]);
             }
 
         /**
@@ -1276,27 +1276,27 @@ void Fv__structure_argument_display(argument_t *ptr_sstc_pssd_argument)
         else
             {
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
             #endif
 
             return ;
             }
         }
 
-    fprintf(stdout, "\n");
+    ft_printf("\n");
 
     /**
     * Display all the argument string of the static array of string in the structure argument passed in argument of the function
     */
-    fprintf(stdout, "ARGUMENT OPTIONS VALUE:\n");
+    ft_printf("ARGUMENT OPTIONS VALUE:\n");
     u8_lcl_cnt = 0;
     while(u8_lcl_cnt < ARGUMENT_OPTION_NUMBER)
         {
@@ -1313,7 +1313,7 @@ void Fv__structure_argument_display(argument_t *ptr_sstc_pssd_argument)
             * Treat the case when the actual argument string of the static array of string in the structure argument passed in argument of the function is null
             */
 
-            fprintf(stdout, "    [%s] VALUE STR: \033[1;93;40m(nill)\033[0m\n", argument_options[u8_lcl_cnt]);
+            ft_printf("    [%s] VALUE STR: \033[1;93;40m(nill)\033[0m\n", argument_options[u8_lcl_cnt]);
             }
         else
             {
@@ -1321,7 +1321,7 @@ void Fv__structure_argument_display(argument_t *ptr_sstc_pssd_argument)
             * Treat the case when the actual argument string of the static array of string in the structure argument passed in argument of the function is not null
             */
 
-            fprintf(stdout, "    [%s] VALUE STR: \033[1;95;40m[\033[0m%s\033[1;95;40m]\033[0m\n", argument_options[u8_lcl_cnt], ptr_sstc_pssd_argument->dbl_ptr_u8_argument_option_value_str_[u8_lcl_cnt]);
+            ft_printf("    [%s] VALUE STR: \033[1;95;40m[\033[0m%s\033[1;95;40m]\033[0m\n", argument_options[u8_lcl_cnt], ptr_sstc_pssd_argument->dbl_ptr_u8_argument_option_value_str_[u8_lcl_cnt]);
             }
 
         /**
@@ -1334,15 +1334,15 @@ void Fv__structure_argument_display(argument_t *ptr_sstc_pssd_argument)
         else
             {
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -1352,7 +1352,7 @@ void Fv__structure_argument_display(argument_t *ptr_sstc_pssd_argument)
             }
         }
 
-    fprintf(stdout, "\n");
+    ft_printf("\n");
 
     /**
     * Check if the dynamique array of file path in the structure argument passed in argument of the function is null
@@ -1363,7 +1363,7 @@ void Fv__structure_argument_display(argument_t *ptr_sstc_pssd_argument)
         * Treat the case when the dynamique array of file path in the structure argument passed in argument of the function is null
         */
 
-        fprintf(stdout, "FILE PATH ARRAY:     \033[1;95;40mNULL\033[0m\n");
+        ft_printf("FILE PATH ARRAY:     \033[1;95;40mNULL\033[0m\n");
         }
     else
         {
@@ -1371,7 +1371,7 @@ void Fv__structure_argument_display(argument_t *ptr_sstc_pssd_argument)
         * Treat the case when the dynamique array of file path in the structure argument passed in argument of the function is not null
         */
 
-        fprintf(stdout, "FILE PATH ARRAY:\n");
+        ft_printf("FILE PATH ARRAY:\n");
 
         /**
         * Display all the file path of the dynamique array of file path in the structure argument passed in argument of the function
@@ -1379,7 +1379,7 @@ void Fv__structure_argument_display(argument_t *ptr_sstc_pssd_argument)
         u64_lcl_cnt = 0;
         while(u64_lcl_cnt < ptr_sstc_pssd_argument->u64_number_of_file_in_argument_ && ptr_sstc_pssd_argument->dbl_ptr_u8_file_path_str_[u64_lcl_cnt] != NULL)
             {
-            fprintf(stdout, "    FILE PATH STR [%lu]: \033[1;95;40m[\033[0m%s\033[1;95;40m]\033[0m\n", u64_lcl_cnt, ptr_sstc_pssd_argument->dbl_ptr_u8_file_path_str_[u64_lcl_cnt]);
+            ft_printf("    FILE PATH STR [%lu]: \033[1;95;40m[\033[0m%s\033[1;95;40m]\033[0m\n", u64_lcl_cnt, ptr_sstc_pssd_argument->dbl_ptr_u8_file_path_str_[u64_lcl_cnt]);
 
             /**
             * Checking for overflow
@@ -1391,15 +1391,15 @@ void Fv__structure_argument_display(argument_t *ptr_sstc_pssd_argument)
             else
                 {
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -1410,11 +1410,11 @@ void Fv__structure_argument_display(argument_t *ptr_sstc_pssd_argument)
             }
         }
 
-    fprintf(stdout, "\n");
+    ft_printf("\n");
 
-    fprintf(stdout, "FILE PATH ARRAY LENGTH: [\033[1;95;40m%lu\033[0m]\n", ptr_sstc_pssd_argument->u64_number_of_file_in_argument_);
+    ft_printf("FILE PATH ARRAY LENGTH: [\033[1;95;40m%lu\033[0m]\n", ptr_sstc_pssd_argument->u64_number_of_file_in_argument_);
 
-    fprintf(stdout, "\n");
+    ft_printf("\n");
 
     /**
     * Check if no command in set in the structure argument passed in argument of the function
@@ -1425,7 +1425,7 @@ void Fv__structure_argument_display(argument_t *ptr_sstc_pssd_argument)
         * Treat the case when no command in set in the structure argument passed in argument of the function
         */
 
-        fprintf(stdout, "COMMAND \033[1;95;40mNOT\033[0m set\n");
+        ft_printf("COMMAND \033[1;95;40mNOT\033[0m set\n");
         }
     else
         {
@@ -1442,7 +1442,7 @@ void Fv__structure_argument_display(argument_t *ptr_sstc_pssd_argument)
             * Treat the case when the command in the structure argument passed in argument of the function does not exist
             */
 
-            fprintf(stdout, "COMMAND \033[1;91;40mNOT EXIST\033[0m\n");
+            ft_printf("COMMAND \033[1;91;40mNOT EXIST\033[0m\n");
             }
         else
             {
@@ -1450,15 +1450,15 @@ void Fv__structure_argument_display(argument_t *ptr_sstc_pssd_argument)
             * Treat the case when the command in the structure argument passed in argument of the function exist
             */
 
-            fprintf(stdout, "COMMAND: \033[1;95;40m%s\033[0m\n", command_name[ptr_sstc_pssd_argument->e_command_type_]);
+            ft_printf("COMMAND: \033[1;95;40m%s\033[0m\n", command_name[ptr_sstc_pssd_argument->e_command_type_]);
             }
         }
 
     /**
     * Setting all the element of the input buffer of the structure argument passed in argument of the function to zero
     */
-    fprintf(stdout, "\n");
-    fprintf(stdout, "INPUT BUFFER \033[1;95;40m[\033[0m");
+    ft_printf("\n");
+    ft_printf("INPUT BUFFER \033[1;95;40m[\033[0m");
     u64_lcl_cnt = 0;
     while(u64_lcl_cnt < ptr_sstc_pssd_argument->u64_length_of_input_buffer_)
         {
@@ -1471,7 +1471,7 @@ void Fv__structure_argument_display(argument_t *ptr_sstc_pssd_argument)
             * Treat the case when the actual character of the input buffer of the structure argument passed in argument of the function is displayable
             */
 
-            printf("%c", ptr_sstc_pssd_argument->u8_input_buffer_[u64_lcl_cnt]);
+            ft_printf("%c", ptr_sstc_pssd_argument->u8_input_buffer_[u64_lcl_cnt]);
             }
         else
             {
@@ -1479,7 +1479,7 @@ void Fv__structure_argument_display(argument_t *ptr_sstc_pssd_argument)
             * Treat the case when the actual character of the input buffer of the structure argument passed in argument of the function is not displayable
             */
 
-            printf("\033[1;95;40m\\%X\033[0m", ptr_sstc_pssd_argument->u8_input_buffer_[u64_lcl_cnt]);
+            ft_printf("\033[1;95;40m\\%X\033[0m", ptr_sstc_pssd_argument->u8_input_buffer_[u64_lcl_cnt]);
             }
 
         /**
@@ -1492,15 +1492,15 @@ void Fv__structure_argument_display(argument_t *ptr_sstc_pssd_argument)
         else
             {
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;33mERROR\033[0m\n");
+            ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m\n");
             #endif
 
             /**
@@ -1509,18 +1509,19 @@ void Fv__structure_argument_display(argument_t *ptr_sstc_pssd_argument)
             return;
             }
         }
-    fprintf(stdout, "\033[1;95;40m]\033[0m\n");
+
+    ft_printf("\033[1;95;40m]\033[0m\n");
 
     /**
     * Display the length of the input buffer of the structure argument passed in argument of the function
     */
-    fprintf(stdout, "\n");
+    ft_printf("\n");
 
-    fprintf(stdout, "INPUT BUFFER LENGTH: [\033[1;95;40m%lu\033[0m]\n", ptr_sstc_pssd_argument->u64_length_of_input_buffer_);
+    ft_printf("INPUT BUFFER LENGTH: [\033[1;95;40m%lu\033[0m]\n", ptr_sstc_pssd_argument->u64_length_of_input_buffer_);
 
-    fprintf(stdout, "\n    ***********************************************\n");
-    fprintf(stdout, "    *            END STRUCTURE ARGUMENT           *\n");
-    fprintf(stdout, "    ***********************************************\n");
+    ft_printf("\n    ***********************************************\n");
+    ft_printf("    *            END STRUCTURE ARGUMENT           *\n");
+    ft_printf("    ***********************************************\n");
     }
 
 uint8_t Fu8__get_first_word_from_string(uint8_t *ptr_u8_pssd_string, uint8_t **dbl_ptr_u8_pssd_word_to_return_str, uint64_t *ptr_u64_pssd_position_in_string)
@@ -1539,15 +1540,15 @@ uint8_t Fu8__get_first_word_from_string(uint8_t *ptr_u8_pssd_string, uint8_t **d
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the string is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the string is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;33mERROR\033[0m\n");
+        ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m\n");
         #endif
 
         /**
@@ -1572,15 +1573,15 @@ uint8_t Fu8__get_first_word_from_string(uint8_t *ptr_u8_pssd_string, uint8_t **d
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the address of the word to return is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the address of the word to return is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;33mERROR\033[0m\n");
+        ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m\n");
         #endif
 
         /**
@@ -1605,15 +1606,15 @@ uint8_t Fu8__get_first_word_from_string(uint8_t *ptr_u8_pssd_string, uint8_t **d
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the address of the position in the string to return is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the address of the position in the string to return is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;33mERROR\033[0m\n");
+        ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m\n");
         #endif
 
         /**
@@ -1668,15 +1669,15 @@ uint8_t Fu8__get_first_word_from_string(uint8_t *ptr_u8_pssd_string, uint8_t **d
         else
             {
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;33mERROR\033[0m\n");
+            ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m\n");
             #endif
 
             /**
@@ -1730,15 +1731,15 @@ uint8_t Fu8__get_first_word_from_string(uint8_t *ptr_u8_pssd_string, uint8_t **d
         else
             {
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;33mERROR\033[0m\n");
+            ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m\n");
             #endif
 
             /**
@@ -1757,15 +1758,15 @@ uint8_t Fu8__get_first_word_from_string(uint8_t *ptr_u8_pssd_string, uint8_t **d
         else
             {
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;33mERROR\033[0m\n");
+            ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m\n");
             #endif
 
             /**
@@ -1813,15 +1814,15 @@ uint8_t Fu8__get_first_word_from_string(uint8_t *ptr_u8_pssd_string, uint8_t **d
         else
             {
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;33mERROR\033[0m\n");
+            ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m\n");
             #endif
 
             /**
@@ -1846,15 +1847,15 @@ uint8_t Fu8__get_first_word_from_string(uint8_t *ptr_u8_pssd_string, uint8_t **d
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the length of the first word in the string passed in argument of the function is at the maximum size\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the length of the first word in the string passed in argument of the function is at the maximum size\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;33mERROR\033[0m\n");
+        ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m\n");
         #endif
 
         /**
@@ -1885,15 +1886,15 @@ uint8_t Fu8__get_first_word_from_string(uint8_t *ptr_u8_pssd_string, uint8_t **d
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The allocation of the word to return failed\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The allocation of the word to return failed\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;33mERROR\033[0m\n");
+        ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m\n");
         #endif
 
         /**
@@ -1931,15 +1932,15 @@ uint8_t Fu8__get_first_word_from_string(uint8_t *ptr_u8_pssd_string, uint8_t **d
         else
             {
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;33mERROR\033[0m\n");
+            ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m\n");
             #endif
 
             /**
@@ -1973,15 +1974,15 @@ uint8_t Fu8__load_argument_data_from_string(argument_t *ptr_sstc_pssd_argument, 
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure argument is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure argument is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -2006,15 +2007,15 @@ uint8_t Fu8__load_argument_data_from_string(argument_t *ptr_sstc_pssd_argument, 
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure argument passed in argument of the function is not already initialized\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure argument passed in argument of the function is not already initialized\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -2039,15 +2040,15 @@ uint8_t Fu8__load_argument_data_from_string(argument_t *ptr_sstc_pssd_argument, 
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the string command is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the string command is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;33mERROR\033[0m\n");
+        ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m\n");
         #endif
 
         /**
@@ -2072,15 +2073,15 @@ uint8_t Fu8__load_argument_data_from_string(argument_t *ptr_sstc_pssd_argument, 
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the pointer of status of the command is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the pointer of status of the command is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;33mERROR\033[0m\n");
+        ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m\n");
         #endif
 
         /**
@@ -2135,15 +2136,15 @@ uint8_t Fu8__load_argument_data_from_string(argument_t *ptr_sstc_pssd_argument, 
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to reset the structure argument passed in argument of the function  failed\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to reset the structure argument passed in argument of the function  failed\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;33mERROR\033[0m\n");
+        ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m\n");
         #endif
 
         /**
@@ -2174,15 +2175,15 @@ uint8_t Fu8__load_argument_data_from_string(argument_t *ptr_sstc_pssd_argument, 
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the first word of the command string passed in argument of the function  failed\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the first word of the command string passed in argument of the function  failed\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;33mERROR\033[0m\n");
+        ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m\n");
         #endif
 
         /**
@@ -2285,15 +2286,15 @@ uint8_t Fu8__load_argument_data_from_string(argument_t *ptr_sstc_pssd_argument, 
         else
             {
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -2315,8 +2316,8 @@ uint8_t Fu8__load_argument_data_from_string(argument_t *ptr_sstc_pssd_argument, 
         /**
         * Display command error and command option help
         */
-        fprintf(stderr, "Invalid command '%s'; type \"help\" for a list.\n", ptr_u8_lcl_word_str);
-        fprintf(stderr, "error in %s\n", ptr_u8_lcl_word_str);
+        ft_fprintf(STDERR_FILENO, "Invalid command '%s'; type \"help\" for a list.\n", ptr_u8_lcl_word_str);
+        ft_fprintf(STDERR_FILENO, "error in %s\n", ptr_u8_lcl_word_str);
 
         /**
         * Freeing and setting to NULL the actual word in the command passed in argument of the function
@@ -2357,15 +2358,15 @@ uint8_t Fu8__load_argument_data_from_string(argument_t *ptr_sstc_pssd_argument, 
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the first word of the command string passed in argument of the function  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the first word of the command string passed in argument of the function  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;33mERROR\033[0m\n");
+            ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m\n");
             #endif
 
             /**
@@ -2455,15 +2456,15 @@ uint8_t Fu8__load_argument_data_from_string(argument_t *ptr_sstc_pssd_argument, 
             else
                 {
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -2557,15 +2558,15 @@ uint8_t Fu8__load_argument_data_from_string(argument_t *ptr_sstc_pssd_argument, 
             else
                 {
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -2602,15 +2603,15 @@ uint8_t Fu8__load_argument_data_from_string(argument_t *ptr_sstc_pssd_argument, 
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the first word of the command string passed in argument of the function  failed\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the first word of the command string passed in argument of the function  failed\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;33mERROR\033[0m\n");
+                ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -2639,8 +2640,8 @@ uint8_t Fu8__load_argument_data_from_string(argument_t *ptr_sstc_pssd_argument, 
                 /**
                 * Display command error and command option help
                 */
-                fprintf(stderr, "Invalid command '%s'; type \"help\" for a list.\n", ptr_u8_lcl_word_str);
-                fprintf(stderr, "error in %s\n", ptr_u8_lcl_word_str);
+                ft_fprintf(STDERR_FILENO, "Invalid command '%s'; type \"help\" for a list.\n", ptr_u8_lcl_word_str);
+                ft_fprintf(STDERR_FILENO, "error in %s\n", ptr_u8_lcl_word_str);
 
                 /**
                 * Freeing and setting to NULL the actual word in the command passed in argument of the function
@@ -2678,15 +2679,15 @@ uint8_t Fu8__load_argument_data_from_string(argument_t *ptr_sstc_pssd_argument, 
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to copy the actual option argument to the actual argument option string in the structure argument passed in argument of the function  failed\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to copy the actual option argument to the actual argument option string in the structure argument passed in argument of the function  failed\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -2726,15 +2727,15 @@ uint8_t Fu8__load_argument_data_from_string(argument_t *ptr_sstc_pssd_argument, 
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the number of file in argument is at the maximum value\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the number of file in argument is at the maximum value\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -2764,15 +2765,15 @@ uint8_t Fu8__load_argument_data_from_string(argument_t *ptr_sstc_pssd_argument, 
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the reallocation of the dynamique array of file path in the structure argument passed in argument of the function failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the reallocation of the dynamique array of file path in the structure argument passed in argument of the function failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -2805,15 +2806,15 @@ uint8_t Fu8__load_argument_data_from_string(argument_t *ptr_sstc_pssd_argument, 
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to copy the content of the actual argument of the program passed in argument of the function to the new file path in the dynamique array of file path in the structure argument passed in argument of the function  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to copy the content of the actual argument of the program passed in argument of the function to the new file path in the dynamique array of file path in the structure argument passed in argument of the function  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -2838,15 +2839,15 @@ uint8_t Fu8__load_argument_data_from_string(argument_t *ptr_sstc_pssd_argument, 
         else
             {
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**
@@ -2884,15 +2885,15 @@ uint8_t Fu8__load_argument_data_from_string(argument_t *ptr_sstc_pssd_argument, 
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to execute command failed\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to execute command failed\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -2926,15 +2927,15 @@ uint8_t Fu8__get_command_from_stdin(argument_t *ptr_sstc_pssd_argument, uint8_t 
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure argument is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure argument is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -2959,15 +2960,15 @@ uint8_t Fu8__get_command_from_stdin(argument_t *ptr_sstc_pssd_argument, uint8_t 
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure argument passed in argument of the function is not already initialized\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure argument passed in argument of the function is not already initialized\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -2992,15 +2993,15 @@ uint8_t Fu8__get_command_from_stdin(argument_t *ptr_sstc_pssd_argument, uint8_t 
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the pointer to the program argument status is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the pointer to the program argument status is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;33mERROR\033[0m\n");
+        ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m\n");
         #endif
 
         /**
@@ -3051,15 +3052,15 @@ uint8_t Fu8__get_command_from_stdin(argument_t *ptr_sstc_pssd_argument, uint8_t 
         else
             {
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;33mERROR\033[0m\n");
+            ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m\n");
             #endif
 
             /**
@@ -3079,8 +3080,7 @@ uint8_t Fu8__get_command_from_stdin(argument_t *ptr_sstc_pssd_argument, uint8_t 
     */ 
     while(u8_lcl_command_exist == FALSE)
         {
-        fprintf(stdout, "ft_ssl> ");
-        (void) fflush(stdout);
+        ft_printf("ft_ssl> ");
 
         /**
         * get the next line from the standard input
@@ -3098,15 +3098,15 @@ uint8_t Fu8__get_command_from_stdin(argument_t *ptr_sstc_pssd_argument, uint8_t 
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the next line from the standard input  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the next line from the standard input  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;33mERROR\033[0m\n");
+            ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m\n");
             #endif
 
             /**
@@ -3137,15 +3137,15 @@ uint8_t Fu8__get_command_from_stdin(argument_t *ptr_sstc_pssd_argument, uint8_t 
             else
                 {
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;33mERROR\033[0m\n");
+                ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -3171,15 +3171,15 @@ uint8_t Fu8__get_command_from_stdin(argument_t *ptr_sstc_pssd_argument, uint8_t 
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the command to execute and the option of the command from the string readen from the standard input  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the command to execute and the option of the command from the string readen from the standard input  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;33mERROR\033[0m\n");
+            ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m\n");
             #endif
 
             /**
@@ -3239,15 +3239,15 @@ uint8_t Fu8__load_data_from_argument(argument_t *ptr_sstc_pssd_argument, int32_t
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure argument is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure argument is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -3272,15 +3272,15 @@ uint8_t Fu8__load_data_from_argument(argument_t *ptr_sstc_pssd_argument, int32_t
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure argument passed in argument of the function is not already initialized\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the structure argument passed in argument of the function is not already initialized\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -3305,15 +3305,15 @@ uint8_t Fu8__load_data_from_argument(argument_t *ptr_sstc_pssd_argument, int32_t
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the number of argument of the program is zero\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the number of argument of the program is zero\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -3338,15 +3338,15 @@ uint8_t Fu8__load_data_from_argument(argument_t *ptr_sstc_pssd_argument, int32_t
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the array of argument of the program passed in argument of the function is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the array of argument of the program passed in argument of the function is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -3371,15 +3371,15 @@ uint8_t Fu8__load_data_from_argument(argument_t *ptr_sstc_pssd_argument, int32_t
         */
 
         #ifdef DEVELOPEMENT
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the program argument status is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the program argument status is not correctly pointing passed as an argument of the function\n", __FILE__, __func__, __LINE__);
         #endif
 
         #ifdef DEMO
-        fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
         #endif
 
         #ifdef PRODUCTION
-        fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+        ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
         #endif
 
         /**
@@ -3442,15 +3442,15 @@ uint8_t Fu8__load_data_from_argument(argument_t *ptr_sstc_pssd_argument, int32_t
             */
 
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the command form the standard input of the program  failed\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to get the command form the standard input of the program  failed\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;33mERROR\033[0m\n");
+            ft_fprintf(STDERR_FILENO, "\033[1;33mERROR\033[0m\n");
             #endif
 
             /**
@@ -3530,15 +3530,15 @@ uint8_t Fu8__load_data_from_argument(argument_t *ptr_sstc_pssd_argument, int32_t
                 else
                     {
                     #ifdef DEVELOPEMENT
-                    fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+                    ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
                     #endif
 
                     #ifdef DEMO
-                    fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                    ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                     #endif
 
                     #ifdef PRODUCTION
-                    fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                    ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
                     #endif
 
                     /**
@@ -3560,7 +3560,7 @@ uint8_t Fu8__load_data_from_argument(argument_t *ptr_sstc_pssd_argument, int32_t
                 /**
                 * Display command error and command option help
                 */
-                fprintf(stderr, "ft_ssl: Error: '%s' is an invalid command.\n\n", dbl_ptr_u8_program_arguments[s32_lcl_argument_loop_cnt]);
+                ft_fprintf(STDERR_FILENO, "ft_ssl: Error: '%s' is an invalid command.\n\n", dbl_ptr_u8_program_arguments[s32_lcl_argument_loop_cnt]);
                 (void) fv__command_option_help();
 
                 (*ptr_u8_pssd_program_argument_status) = ARGUMENT_ERROR;
@@ -3640,15 +3640,15 @@ uint8_t Fu8__load_data_from_argument(argument_t *ptr_sstc_pssd_argument, int32_t
                 else
                     {
                     #ifdef DEVELOPEMENT
-                    fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+                    ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
                     #endif
 
                     #ifdef DEMO
-                    fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                    ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                     #endif
 
                     #ifdef PRODUCTION
-                    fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                    ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
                     #endif
 
                     /**
@@ -3682,15 +3682,15 @@ uint8_t Fu8__load_data_from_argument(argument_t *ptr_sstc_pssd_argument, int32_t
                 else
                     {
                     #ifdef DEVELOPEMENT
-                    fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The signed 32 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+                    ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The signed 32 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
                     #endif
 
                     #ifdef DEMO
-                    fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                    ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                     #endif
 
                     #ifdef PRODUCTION
-                    fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                    ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
                     #endif
 
                     /**
@@ -3763,15 +3763,15 @@ uint8_t Fu8__load_data_from_argument(argument_t *ptr_sstc_pssd_argument, int32_t
                 else
                     {
                     #ifdef DEVELOPEMENT
-                    fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+                    ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 8 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
                     #endif
 
                     #ifdef DEMO
-                    fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                    ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                     #endif
 
                     #ifdef PRODUCTION
-                    fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                    ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
                     #endif
 
                     /**
@@ -3798,7 +3798,7 @@ uint8_t Fu8__load_data_from_argument(argument_t *ptr_sstc_pssd_argument, int32_t
                     /**
                     * Display option error and command option help
                     */
-                    fprintf(stderr, "ft_ssl: Error: '%s' missing argument.\n\n", dbl_ptr_u8_program_arguments[s32_lcl_argument_loop_cnt]);
+                    ft_fprintf(STDERR_FILENO, "ft_ssl: Error: '%s' missing argument.\n\n", dbl_ptr_u8_program_arguments[s32_lcl_argument_loop_cnt]);
 
                     (void) fv__command_option_help();
 
@@ -3828,15 +3828,15 @@ uint8_t Fu8__load_data_from_argument(argument_t *ptr_sstc_pssd_argument, int32_t
                 else
                     {
                     #ifdef DEVELOPEMENT
-                    fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The signed 32 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+                    ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The signed 32 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
                     #endif
 
                     #ifdef DEMO
-                    fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                    ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                     #endif
 
                     #ifdef PRODUCTION
-                    fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                    ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
                     #endif
 
                     /**
@@ -3861,15 +3861,15 @@ uint8_t Fu8__load_data_from_argument(argument_t *ptr_sstc_pssd_argument, int32_t
                     */
 
                     #ifdef DEVELOPEMENT
-                    fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to copy the actual option argument to the actual argument option string in the structure argument passed in argument of the function  failed\n", __FILE__, __func__, __LINE__);
+                    ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to copy the actual option argument to the actual argument option string in the structure argument passed in argument of the function  failed\n", __FILE__, __func__, __LINE__);
                     #endif
 
                     #ifdef DEMO
-                    fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                    ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                     #endif
 
                     #ifdef PRODUCTION
-                    fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                    ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
                     #endif
 
                     /**
@@ -3894,15 +3894,15 @@ uint8_t Fu8__load_data_from_argument(argument_t *ptr_sstc_pssd_argument, int32_t
                 else
                     {
                     #ifdef DEVELOPEMENT
-                    fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The signed 32 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+                    ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The signed 32 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
                     #endif
 
                     #ifdef DEMO
-                    fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                    ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                     #endif
 
                     #ifdef PRODUCTION
-                    fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                    ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
                     #endif
 
                     /**
@@ -3930,15 +3930,15 @@ uint8_t Fu8__load_data_from_argument(argument_t *ptr_sstc_pssd_argument, int32_t
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the number of file in argument is at the maximum value\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the number of file in argument is at the maximum value\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -3968,15 +3968,15 @@ uint8_t Fu8__load_data_from_argument(argument_t *ptr_sstc_pssd_argument, int32_t
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the reallocation of the dynamique array of file path in the structure argument passed in argument of the function failed\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    the reallocation of the dynamique array of file path in the structure argument passed in argument of the function failed\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -4009,15 +4009,15 @@ uint8_t Fu8__load_data_from_argument(argument_t *ptr_sstc_pssd_argument, int32_t
                 */
 
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to copy the content of the actual argument of the program passed in argument of the function to the new file path in the dynamique array of file path in the structure argument passed in argument of the function  failed\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The function to copy the content of the actual argument of the program passed in argument of the function to the new file path in the dynamique array of file path in the structure argument passed in argument of the function  failed\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -4042,15 +4042,15 @@ uint8_t Fu8__load_data_from_argument(argument_t *ptr_sstc_pssd_argument, int32_t
             else
                 {
                 #ifdef DEVELOPEMENT
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+                ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The unsigned 64 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
                 #endif
 
                 #ifdef DEMO
-                fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+                ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
                 #endif
 
                 #ifdef PRODUCTION
-                fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+                ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
                 #endif
 
                 /**
@@ -4070,15 +4070,15 @@ uint8_t Fu8__load_data_from_argument(argument_t *ptr_sstc_pssd_argument, int32_t
         else
             {
             #ifdef DEVELOPEMENT
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The signed 32 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m in function \033[1m%s\033[0m at line \033[1m%d\033[0m\n    The signed 32 integer counter variable is going to overflow\n", __FILE__, __func__, __LINE__);
             #endif
 
             #ifdef DEMO
-            fprintf(stderr, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m: in file \033[1m%s\033[0m at line \033[1m%s\033[0m\n", __FILE__, __LINE__);
             #endif
 
             #ifdef PRODUCTION
-            fprintf(stderr, "\033[1;31mERROR\033[0m\n");
+            ft_fprintf(STDERR_FILENO, "\033[1;31mERROR\033[0m\n");
             #endif
 
             /**

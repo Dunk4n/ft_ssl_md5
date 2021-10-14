@@ -15,7 +15,7 @@
 #include <stdarg.h>
 #include "printf.h"
 
-static int		conv_percent(va_list list, int *flags)
+static int		conv_percent(int output, va_list list, int *flags)
 {
 	long long		c;
 	char			padding;
@@ -25,34 +25,34 @@ static int		conv_percent(va_list list, int *flags)
 	c = '%';
 	padding = (!flags[0] && flags[1]) ? '0' : ' ';
 	if (flags[0])
-		write(1, &c, 1);
+		write(output, &c, 1);
 	i = 0;
 	while (flags[10] && (int)i < flags[10] - 1)
 	{
-		write(1, &padding, 1);
+		write(output, &padding, 1);
 		i++;
 	}
 	if (!flags[0])
-		write(1, &c, 1);
+		write(output, &c, 1);
 	return (i + 1);
 }
 
-static int		conv_float(va_list list, int *flags)
+static int		conv_float(int output, va_list list, int *flags)
 {
-	return (conv_float_print(va_arg(list, double), flags, 1));
+	return (conv_float_print(output, va_arg(list, double), flags, 1));
 }
 
-static int		conv_sct(va_list list, int *flags)
+static int		conv_sct(int output, va_list list, int *flags)
 {
-	return (conv_sct_print(va_arg(list, double), flags, 1));
+	return (conv_sct_print(output, va_arg(list, double), flags, 1));
 }
 
-int				(*g_f[13])(va_list, int*) = {conv_char, conv_str, conv_ptr,
+int				(*g_f[13])(int, va_list, int*) = {conv_char, conv_str, conv_ptr,
 	conv_int, conv_int, conv_uint, conv_hex, conv_uhex, conv_percent,
 	conv_nb_print_char, conv_float, conv_g, conv_sct};
 
-int				ft_makeconv(const char *str, int *size, va_list list,
-size_t nb_print)
+int				ft_makeconv(int output, const char *str, int *size,
+va_list list, size_t nb_print)
 {
 	size_t	i;
 	int		res;
@@ -71,7 +71,7 @@ size_t nb_print)
 		{
 			if (CONVERSIONS[i - 1] == 'n')
 				flags[0] = (int)nb_print;
-			res = (g_f[i - 1])(list, flags);
+			res = (g_f[i - 1])(output, list, flags);
 			break ;
 		}
 	if (res == -1)

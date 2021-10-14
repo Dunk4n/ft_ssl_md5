@@ -77,6 +77,7 @@ int				ft_strcmp(char const *s1, char const *s2);
 int				ft_strcmp_no_case(char const *s1, char const *s2);
 
 int				ft_printf(const char *str, ...);
+int				ft_fprintf(int output, const char *str, ...);
 
 # ifndef LIBFT_BUFFER_SIZE
 #  define LIBFT_BUFFER_SIZE (4096)

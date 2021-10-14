@@ -28,7 +28,7 @@ static unsigned long long	get_nb(va_list list, int *flags)
 	return (va_arg(list, unsigned int));
 }
 
-static size_t				put_ulong_nbr(unsigned long long nb, int len,
+static size_t				put_ulong_nbr(int output, unsigned long long nb, int len,
 int nb_c)
 {
 	size_t	n;
@@ -37,29 +37,29 @@ int nb_c)
 	n = 0;
 	if (nb > 9 || len - 1 > 0)
 	{
-		n += put_ulong_nbr(nb / 10, len - 1, (nb_c >= 0) ? nb_c + 1 : -1);
+		n += put_ulong_nbr(output, nb / 10, len - 1, (nb_c >= 0) ? nb_c + 1 : -1);
 		c = (nb % 10) + '0';
-		n += write(1, &c, 1);
+		n += write(output, &c, 1);
 		if (nb > 0 && nb_c > 1 && (nb_c) % 3 == 0)
-			n += write(1, ",", 1);
+			n += write(output, ",", 1);
 		return (n);
 	}
 	c = nb + '0';
-	n += write(1, &c, 1);
+	n += write(output, &c, 1);
 	if (nb > 0 && nb_c > 1 && (nb_c) % 3 == 0)
-		n += write(1, ",", 1);
+		n += write(output, ",", 1);
 	return (n);
 }
 
-static size_t				put_nb(unsigned long long nb, int *flags)
+static size_t				put_nb(int output, unsigned long long nb, int *flags)
 {
 	size_t	i;
 
 	i = 0;
 	if (flags[1])
-		return (put_ulong_nbr(nb, flags[10] - i, flags[6]) + i);
+		return (put_ulong_nbr(output, nb, flags[10] - i, flags[6]) + i);
 	else
-		return (put_ulong_nbr(nb, flags[2], flags[6]) + i);
+		return (put_ulong_nbr(output, nb, flags[2], flags[6]) + i);
 }
 
 static size_t				get_len(unsigned long long nb, int *flags)
@@ -76,7 +76,7 @@ static size_t				get_len(unsigned long long nb, int *flags)
 	return (len);
 }
 
-int							conv_uint(va_list list, int *flags)
+int							conv_uint(int output, va_list list, int *flags)
 {
 	unsigned long long	nb;
 	size_t				i;
@@ -88,13 +88,13 @@ int							conv_uint(va_list list, int *flags)
 	i = 0;
 	len = get_len(nb, flags);
 	if (flags[0] && (flags[2] || nb))
-		i += put_nb(nb, flags);
+		i += put_nb(output, nb, flags);
 	while (!flags[1] && (int)i < (int)(flags[10] - len))
 	{
-		write(1, " ", 1);
+		write(output, " ", 1);
 		i++;
 	}
 	if (!flags[0] && (flags[2] || nb))
-		i += put_nb(nb, flags);
+		i += put_nb(output, nb, flags);
 	return (i);
 }

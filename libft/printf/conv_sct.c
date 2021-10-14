@@ -16,15 +16,15 @@
 #include <float.h>
 #include "printf.h"
 
-static size_t	put_double(double nb, int len, int *flags)
+static size_t	put_double(int output, double nb, int len, int *flags)
 {
 	size_t	i;
 	int		j;
 	char	c;
 
-	i = put_long_nbr((long long)nb, (len < 0) ? 1 : len, flags[6]);
+	i = put_long_nbr(output, (long long)nb, (len < 0) ? 1 : len, flags[6]);
 	if (flags[2] || flags[7])
-		i += write(1, ".", 1);
+		i += write(output, ".", 1);
 	else
 		return (i);
 	nb = nb - (long long)nb;
@@ -37,38 +37,38 @@ static size_t	put_double(double nb, int len, int *flags)
 	{
 		nb *= 10;
 		c = (char)(nb) + '0';
-		i += write(1, &c, 1);
+		i += write(output, &c, 1);
 		nb = nb - (long long)(nb);
 		j++;
 	}
 	return (i);
 }
 
-static size_t	put_nb_sct(double nb, int *flags, int exp, int len)
+static size_t	put_nb_sct(int output, double nb, int *flags, int exp, int len)
 {
 	size_t	i;
 
 	i = 0;
 	if (nb < 0)
-		i += write(1, "-", 1);
+		i += write(output, "-", 1);
 	if (nb >= 0 && flags[9])
-		i += write(1, "+", 1);
+		i += write(output, "+", 1);
 	if (nb >= 0 && flags[8] && !flags[9])
-		i += write(1, " ", 1);
+		i += write(output, " ", 1);
 	if (flags[1])
 	{
-		i += put_double(nb, flags[10] - len + 1, flags);
-		i += write(1, (exp < 0) ? "e-" : "e+", 2);
+		i += put_double(output, nb, flags[10] - len + 1, flags);
+		i += write(output, (exp < 0) ? "e-" : "e+", 2);
 		if (exp < 0)
 			exp *= -1;
-		i += put_long_nbr(exp, 2, -1);
+		i += put_long_nbr(output, exp, 2, -1);
 		return (i);
 	}
-	i += put_double(nb, 0, flags);
-	i += write(1, (exp < 0) ? "e-" : "e+", 2);
+	i += put_double(output, nb, 0, flags);
+	i += write(output, (exp < 0) ? "e-" : "e+", 2);
 	if (exp < 0)
 		exp *= -1;
-	i += put_long_nbr(exp, 2, -1);
+	i += put_long_nbr(output, exp, 2, -1);
 	return (i);
 }
 
@@ -128,7 +128,7 @@ static double	sct_round(double nb, int *flags, int *exp, int round)
 	return (nb);
 }
 
-int				conv_sct_print(double nb, int *flags, int round)
+int				conv_sct_print(int output, double nb, int *flags, int round)
 {
 	size_t	i;
 	size_t	len;
@@ -141,10 +141,10 @@ int				conv_sct_print(double nb, int *flags, int round)
 	i = 0;
 	len = get_len_sct(nb, flags, exp * 10);
 	if (flags[0])
-		i += put_nb_sct(nb, flags, exp, len);
+		i += put_nb_sct(output, nb, flags, exp, len);
 	while (!flags[1] && (int)(i++) < (int)(flags[10] - len))
-		write(1, " ", 1);
+		write(output, " ", 1);
 	if (!flags[0])
-		i += put_nb_sct(nb, flags, exp, len);
+		i += put_nb_sct(output, nb, flags, exp, len);
 	return (i + ((!flags[1]) ? -1 : 0));
 }

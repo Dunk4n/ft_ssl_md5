@@ -16,10 +16,11 @@
 #include <wchar.h>
 #include "printf.h"
 
-int		conv_nb_print_char(va_list list, int *flags)
+int		conv_nb_print_char(int output, va_list list, int *flags)
 {
 	void	*ptr;
 
+    (void) output;
 	ptr = va_arg(list, int*);
 	if (flags[4] == 1)
 		*((long*)ptr) = flags[0];

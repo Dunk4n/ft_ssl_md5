@@ -36,7 +36,7 @@ static int		get_len(int *flags, size_t len)
 	return ((len < (size_t)flags[2]) ? (int)len : flags[2]);
 }
 
-int				conv_str(va_list list, int *flags)
+int				conv_str(int output, va_list list, int *flags)
 {
 	char	*s;
 	size_t	i;
@@ -50,14 +50,14 @@ int				conv_str(va_list list, int *flags)
 		len++;
 	flags[2] = get_len(flags, len);
 	if (flags[0])
-		write(1, s, flags[2]);
+		write(output, s, flags[2]);
 	i = 0;
 	while (flags[10] - flags[2] > 0 && (int)i < (int)(flags[10] - flags[2]))
 	{
-		write(1, (flags[1] && !flags[0]) ? "0" : " ", 1);
+		write(output, (flags[1] && !flags[0]) ? "0" : " ", 1);
 		i++;
 	}
 	if (!flags[0])
-		write(1, s, ((int)len < flags[2]) ? (int)len : flags[2]);
+		write(output, s, ((int)len < flags[2]) ? (int)len : flags[2]);
 	return (i + (((int)len < flags[2]) ? (int)len : flags[2]));
 }
