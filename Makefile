@@ -73,7 +73,7 @@ fclean: clean
 $(NAME): options $(OBJ)
 	@$(MAKE) -C $(LIB_DIRECTORY) --no-print-directory
 	@echo "  BUILD    $@"
-	$(CC) $(CFLAGS) -o $@ $(OBJ) $(LDFLAGS)
+	@$(CC) $(CFLAGS) -o $@ $(OBJ) $(LDFLAGS)
 
 re:	fclean	all
 
