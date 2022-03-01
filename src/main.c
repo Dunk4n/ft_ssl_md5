@@ -331,7 +331,7 @@ int main(int32_t s32_pssd_program_argument_number, char **dbl_ptr_s8_pssd_progra
         /**
         * Treat the case when no error occure during the execution of the passed command
         */
-        } 
+        }
 
     /**
     * Closing the structure argument data
